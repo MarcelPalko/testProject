@@ -3,6 +3,25 @@
         DCSoft - Admin
     </div>
     <div fxFlex="1 1 100%" class="sidenav__content">
-
+        <div fxLayout="column" fxLayoutGap="30px">
+            <div class="sidenav__content-item" fxLayout="row" fxLayoutGap="15px">
+                <i class="fas fa-th-large"></i>
+                <span>Nástěnka</span>
+            </div>
+            <ng-container *ngFor="let group of sidenavItems">
+                <div class="sidenav__content-group" fxLayout="column" fxLayoutGap="30px">
+                    <div class="sidenav__content-group__title">{{ group.title }}</div>
+                    <ng-container *ngFor="let item of group.children">
+                        <div class="sidenav__content-item" fxLayout="row" fxLayoutAlign="space-between">
+                            <div class="sidenav__content-item__title" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="15px">
+                                <i [class]="item.icon"></i>
+                                <div>{{ item.title }}</div>
+                            </div>
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                    </ng-container>
+                </div>
+            </ng-container>
+        </div>
     </div>
 </div>
