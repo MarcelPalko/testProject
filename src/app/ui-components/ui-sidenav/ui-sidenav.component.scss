@@ -1,0 +1,42 @@
+.sidenav {
+    width: 240px;
+
+    &__title {
+        height: 64px;
+        padding-left: 15px;
+
+        font-size: 20px;
+        background-color: #246ea7;
+        color: #fff;
+    }
+
+    &__content {
+        padding: 40px 15px 15px;
+        background: #212529;
+        color: #fff;
+
+        &-item:first-of-type {
+            color: #fff;
+        }
+
+        &-item {
+            align-items: baseline !important;
+            color: #b4bcc8;
+
+            &__title {
+                align-items: baseline;
+            }
+        }
+
+        &-group {
+            &__title {
+                font-size: 14px;
+                color: #6c6c66;
+            }
+
+            .fa-chevron-left {
+                font-size: 10px;
+            }
+        }
+    }
+}
